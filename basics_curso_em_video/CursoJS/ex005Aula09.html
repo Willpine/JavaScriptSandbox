@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            color: aliceblue;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    
+    <script> // Não é necessário window.document
+        // Vai pegar o primeiro elemento <p>
+        let p1 = document.getElementsByTagName('p')[0]
+        let d = document.querySelector('div#msg')
+        //let d = document.getElementById('msg')
+        // p1.style.color = 'blue'
+        document.write('Parágrafo 1 denovo: '+p1.innerText)
+        
+        d.innerText = 'Não clique mais'
+    </script>
+</body>
+</html>

@@ -18,3 +18,15 @@ n1 = String(n1) // Isso transforma num string
 n1 = n1.toString() // Isso também
 
 Na segunda parte, vemos String templates e formatação
+
+## AULA 07 E 8
+
+Sobre operadores relacionais, lógicos, atribuição, ternários.
+
+## AULA 09 - DOM
+
+Como selecionar elementos de uma página html.
+
+## AULA 10 - EVENTOS
+
+Como fazer event listeners usando inputs.
