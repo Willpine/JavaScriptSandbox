@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body{
+            background-color: cornflowerblue ;
+            color: whitesmoke;
+            font-family: monospace;
+        }
+        h1{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo</h1>
+    <p>Já me livrei da maldição.</p>
+    <script>
+        let n1 = window.prompt('Digite um número')
+        let n2 = window.prompt('Digite outro número')
+        let res = n1 + n2 // ISSO NÃO SOMA, ISSO CONCATENA
+        n1 = Number.parseInt(n1)
+        n2 = Number(n2)// Assim o JS decide se é inteiro ou real
+        res = n1 + n2 // ISSO CONCATENA
+        window.alert('Resultado: ' + res)
+        String(n1)// Isso transforma num string
+        n1.toString()// Mesma coisa
+        window.alert(`Resultado: ${res}`)
+    </script>
+</body>
+</html>
