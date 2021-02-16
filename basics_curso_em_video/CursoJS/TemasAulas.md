@@ -30,3 +30,15 @@ Como selecionar elementos de uma página html.
 ## AULA 10 - EVENTOS
 
 Como fazer event listeners usando inputs.
+
+## AULA 11 E 12 - CONDIÇÕES
+
+Construímos uma simples condição que avalia se alguém é estrangeiro ou nativo brasileiro.
+
+Na aula 12 o que há de diferente é o switch. Igual no java.
+
+Se declararmos um objeto Date e darmos um getDay, ele devolve hoje.
+
+## AULA 12 - 2 EXERCÍCIOS
+
+CSS e JavaScript externos.

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009</title>
+</head>
+<body>
+    <input type="text" name="input_pais" id="input_pais">
+    <input type="button" value="Classificar" onclick="classificar()">
+    <div id="classificacao">Classificação</div>
+
+
+    <script>
+        let pais = document.querySelector('input#input_pais')
+        let classificacao = document.querySelector('div#classificacao')
+        function classificar (){
+            pais.value === 'Brasil' ? classificacao.innerHTML += '<p>Você é Nativo</p>' : classificacao.innerHTML += '<p>Você é Estrangeiro</p>'
+        }
+    </script>
+</body>
+</html>
