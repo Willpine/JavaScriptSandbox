@@ -10,6 +10,7 @@ function gerarTabuada() {
         for(let i = 0; i<=10;i++){
             let linha = document.createElement('option')
             linha.innerText = `${numero} X ${i} = ${numero*i}`
+            linha.value = `tab ${i}` // Necessário para outras línguas como PHP
             tabuada.append(linha)
         }
     }else{

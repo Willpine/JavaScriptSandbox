@@ -7,7 +7,10 @@ function contar() {
     let passo = Number.parseInt(document.querySelector('input#passo').value)
     let res = document.querySelector('div#res')
     let contagem = ''
-    if (inicio < fim) {
+
+    if(isNaN(inicio) || isNaN(fim) || isNaN(passo)){
+        alert('Insira um número válido nos 3 campos')
+    }else if (inicio < fim) {
         if(passo <=1){
             alert('Valor inválido para passos.\nConsiderando o passo como 1')
             passo = 1
