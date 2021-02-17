@@ -47,4 +47,10 @@ No segundo exercício, aprendemos:
 
 + Funcionamento básico de radio buttons.
 + Definir estilos diretamente do javascript.
-+ Criar elementos diretamente/dinâmicamente à partir do JS com id.
++ Criar elementos diretamente/dinâmicamente à partir do JS com id. Nesse caso, criamos uma imagem segundo o que foi escolhido pelo usuário.
+
+## AULA 13 E 14 - REPETIÇÕES
+
++ while
++ do while
++ for
