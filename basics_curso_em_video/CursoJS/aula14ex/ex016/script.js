@@ -12,12 +12,12 @@ function contar() {
             alert('Valor inválido para passos.\nConsiderando o passo como 1')
             passo = 1
         }
-        contagem += `${inicio} > `
+        contagem += `${inicio} &#128073 `
         while((inicio + passo) <= fim){
             inicio += passo;
-            contagem += `${inicio} > `
+            contagem += `${inicio} &#128073 `
         }
-        contagem += 'FIM'
+        contagem += '&#127988'
         res.innerHTML = `<p>${contagem}</p>`
     } else {
         alert('O número inicial deve ser maior que o número final')
