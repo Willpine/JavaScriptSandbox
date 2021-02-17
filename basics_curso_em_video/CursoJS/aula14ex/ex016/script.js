@@ -20,7 +20,13 @@ function contar() {
         contagem += '&#127988'
         res.innerHTML = `<p>${contagem}</p>`
     } else {
-        alert('O número inicial deve ser maior que o número final')
+        contagem += `${inicio} &#128073 `
+        while((inicio - passo) >= fim){
+            inicio -= passo;
+            contagem += `${inicio} &#128073 `
+        }
+        contagem += '&#127988'
+        res.innerHTML = `<p>${contagem}</p>`
     }
 
 }
