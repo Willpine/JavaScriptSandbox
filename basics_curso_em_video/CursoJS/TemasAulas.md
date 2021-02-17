@@ -42,3 +42,9 @@ Se declararmos um objeto Date e darmos um getDay, ele devolve hoje.
 ## AULA 12 - 2 EXERCÍCIOS
 
 CSS e JavaScript externos.
+
+No segundo exercício, aprendemos:
+
++ Funcionamento básico de radio buttons.
++ Definir estilos diretamente do javascript.
++ Criar elementos diretamente/dinâmicamente à partir do JS com id.
