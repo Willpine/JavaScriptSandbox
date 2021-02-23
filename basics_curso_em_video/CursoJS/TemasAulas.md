@@ -54,3 +54,58 @@ No segundo exercício, aprendemos:
 + while
 + do while
 + for
+
+Nos exercícios da aula14, aprendi:
+
++ fundamentos de um select e options
++ como implementar emojis
++ selecionar todos os childs de um elemento pelo query selector
+
+## AULA 15 - VARIÁVEIS COMPOSTAS
+
+São simplesmente um vetor.
+
+> let autos = []
+> let autos = ['auto1','auto2','auto3']
+> autos[3]='auto5'
+> autos.push('auto4')
+> autos.length // aqui é um atributo, não um método, por isso não tem parênteses
+> autos.sort() // vai colocar todos os elementos em ordem crescente; ELE MUDA PERMANENTEMENTE
+
+Pode-se printar o vetor diretamente, ou apenas fazer um *for in* usando seu length.
+
+> for(let i in autos){
+> console.log(autos[i])
+> }
+
+Podemos *pesquisar no vetor por valores* o que retorna a posição se ele existir:
+
+> autos.indexOf('auto1')
+
+Se ele retornar *-1*, *o valor não foi encontrado*
+
+## AULA 16 - FUNÇÕES
+
+Mesma coisa do java, porém:
+
++ É possível definir valores default para parâmetros:
+
+> function soma (n1=0,n2=0){
+>    return n1 + n2;
+> }
+
+Se não for passado n1 ou n2, são considerados 0.
+
++ Também é possível atribuir uma function a uma variável:
+
+> let v = function(x) {
+>    return x*2
+> }
+
+> v(2)
+> 4
+
+## Aula 17 - OBJETOS
+
+Objetos são declarados usando {} e podem armazenar functions também.
+let carro = {nome:'HB20',marca:'Hyundai',acelerar(p){}}
