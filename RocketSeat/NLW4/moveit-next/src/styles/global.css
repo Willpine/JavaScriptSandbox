@@ -1,8 +1,8 @@
 /*O component button não identifica imediatamente o estilo
   por isso, temos que especificar o button aqui*/
-/*  body, button {
+body{
         font-family: 'Inter',arial;
-    } */
+    } 
 
 * {
     margin: 0;
@@ -20,7 +20,7 @@
     --red:#E84F5B;
     --green:#4CD62B;
     --blue:#5065E0;
-    --dark-blue:#4953B8;
+    --blue-dark:#4953B8;
     --blue-twitter:#3AA9E0;
 
 }
