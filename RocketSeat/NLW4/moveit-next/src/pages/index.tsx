@@ -8,6 +8,9 @@ import Head from 'next/head'
 import styles from '../styles/pages/Home.module.css';
 import { ChallengeBox } from "../components/ChallengeBox";
 
+import { CountdownProvider } from "../contexts/CountdownContext";
+
+// Lembrando que _app é o nível máximo, e index está abaixo de _app
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,16 +18,18 @@ export default function Home() {
         <title>Início | Moveit</title>
       </Head>
       <ExperienceBar />
-      <section>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </div>
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
+      <CountdownProvider>
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
+          <div>
+            <ChallengeBox />
+          </div>
+        </section>
+      </CountdownProvider>
     </div>
   )
 }
