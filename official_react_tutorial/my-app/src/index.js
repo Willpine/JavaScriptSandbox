@@ -3,18 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Square extends React.Component {
+
     render(){
         return(
-            <button className="square">
-                {/* TODO */}
+            <button className="square" 
+            onClick={() => {this.props.onClick()}}> 
+                {/* This is an event handler, we are going to use arrow functions for this */}
+                {/* A common mistake is using onClick={alert('click');} which will fire this event everytime this component re-renders*/}
+                {this.props.value}
             </button>
-        )
+        );
     }
 }
 
 class Board extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { squares: Array(9).fill(null),};
+    }
+
     renderSquare(i) {
-        return <Square />;
+        return ( 
+            <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)} />
+        );
     }
 
     render () {
