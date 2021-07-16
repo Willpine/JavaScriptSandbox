@@ -52,6 +52,7 @@ class Game extends React.Component {
             history: [{squares: Array(9).fill(null),}],
             stepNumber: 0,
             xIsNext: true,
+            position: [],
         }
     }
     
@@ -59,6 +60,7 @@ class Game extends React.Component {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
+        const position = this.state.position.slice();
 
         if (calculateWinner(squares) || squares[i]) {
             return;
@@ -68,6 +70,7 @@ class Game extends React.Component {
             history: history.concat([{squares: squares,}]),
             stepNumber: history.length,
             xIsNext: !this.state.xIsNext,
+            position: position.concat(i),
         });
     }
 
@@ -84,7 +87,10 @@ class Game extends React.Component {
         const winner = calculateWinner(current.squares);
 
         const moves = history.map((step, move) => 
-        {const desc = move ? `Go to move ${move} col: , row` : 'Go to game start'
+        {
+            const square = this.state.position[move - 1];
+            const position = calculatePosition(square);
+            const desc = move ? `Go to move ${move} col: ${position[1]}, row: ${position[0]}` : 'Go to game start'
             return(
                 <li key={move}>
                 <button onClick={() => this.jumpTo(move)}>{desc}</button>
@@ -134,6 +140,32 @@ function calculateWinner(squares) {
        } 
    } 
    return null;
+}
+
+function calculatePosition(square) {
+    switch (square) {
+        case 0:
+            return [1,1];
+        case 1:
+            return [1,2];
+        case 2:
+            return [1,3];
+        case 3:
+            return [2,1];
+        case 4:
+            return [2,2];
+        case 5:
+            return [2,3];
+        case 6:
+            return [3,1];
+        case 7:
+            return [3,2];
+        case 8:
+            return [3,3];
+        default:
+            return null;
+    
+    }
 }
 // =======================================
 
